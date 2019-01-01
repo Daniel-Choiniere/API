@@ -19,7 +19,8 @@
   "homepage": "https://github.com/Daniel-Choiniere/API#readme",
   "dependencies": {
     "body-parser": "1.18.3",
-    "express": "4.16.4"
+    "express": "4.16.4",
+    "mongoose": "^5.4.1"
   },
   "devDependencies": {
     "nodemon": "^1.18.9"
