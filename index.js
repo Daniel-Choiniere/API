@@ -9,6 +9,9 @@ const app = express();
 mongoose.connect('mongodb://localhost/ninjago');
 mongoose.Promise = global.Promise;
 
+
+app.use(express.static('public'));
+
 // middleware
 app.use(bodyParser.json());
 
@@ -16,9 +19,9 @@ app.use(bodyParser.json());
 app.use('/api', require("./routes/api"));
 
 // error handling middleware
-app.use(function(err, req, res, next){
+app.use(function(err, res){
     // console.log(err);
-    res.status(422).send({error: err.message})
+    res.status(422).send({error: err.message});
 });
 
 // listen for requests
