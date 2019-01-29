@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-// get a list of nnjas from the database
+// get a list of ninjas from the database
 router.get('/ninjas', function (req,res){
     res.send({type: 'GET'});
 });
